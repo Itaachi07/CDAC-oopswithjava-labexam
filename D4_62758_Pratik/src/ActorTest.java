@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 class ActorUnderratedException extends Exception{
 	public ActorUnderratedException() {
@@ -14,8 +15,8 @@ class ActorOverratedException extends Exception{
 public class ActorTest {
 	
 	static Scanner sc = new Scanner(System.in);
-	ArrayList<Actor>al= new ArrayList<Actor>();
-	//static Actor a =null;
+	static ArrayList<Actor>al= new ArrayList<Actor>();
+	static Actor a =null;
 	public static void AcceptRecord(ArrayList<Actor>a) 
 	{
 		System.out.println("Enter the Actor's name");
@@ -27,7 +28,7 @@ public class ActorTest {
 		System.out.println("Enter the Actor's Email ID");
 		String aemailid= sc.next();
 		System.out.println("Enter the Actor's Contact");
-		int acontact= sc.nextInt();
+		String acontact= sc.next();
 		try {
 		System.out.println("Enter the Actor's rating");
 		int arating = sc.nextInt();
@@ -43,7 +44,8 @@ public class ActorTest {
 		catch (ActorUnderratedException e){
 			int arating =0;
 			System.out.println("ActorUnderratedException. Actor rating is now considered as 0");
-		} catch (ActorOverratedException e) {
+		} 
+		catch (ActorOverratedException e) {
 			// TODO Auto-generated catch block
 			int arating=5;
 			System.out.println("ActorOvererratedException. Actor rating is now considered as 5");
@@ -52,7 +54,7 @@ public class ActorTest {
 	}
 	//Actor a= new Actor(aname, agender, aage, aemailid, acontact, arating);
 	public static void main(String[] args) {
-		//a.add(new Actor("Amir khan","male",28,"amir@gmail.com",9421135877,4));
+		//al.add(new Actor("Amir","male",28,"amir@gmail.com",9421135877,4));
 		int choice= 0;
 		int count =0;
 		
@@ -64,16 +66,20 @@ public class ActorTest {
 			System.out.println("4. Search Actor's by name");
 			System.out.println("5. Sort Actor's by name");
 			System.out.println("6. Display All Actor");
+			System.out.println("***********************************");
 			choice =sc.nextInt();
 			switch(choice)
 			{
 			case 1:
 			{
-				
+				AcceptRecord(al);
+				for(Object obj:al)
+					System.out.println(obj);
 			}break;
 			
 			case 2:
 			{
+				System.out.println();
 				
 			}break;
 			case 3:
@@ -86,10 +92,15 @@ public class ActorTest {
 			}break;
 			case 5:
 			{
+				Collections.sort(al);
+				for(Object obj:al)
+					System.out.println(obj);
 				
 			}break;
 			case 6:
 			{
+				for(Object obj:al)
+					System.out.println(obj);
 				
 			}break;
 			}

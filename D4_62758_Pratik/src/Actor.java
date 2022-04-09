@@ -5,9 +5,9 @@ public class Actor implements Comparable<Actor>
 	String gender;
 	int age;
 	String email_id;
-	int contact;
+	String contact;
 	int rating;
-	public Actor(String name, String gender, int age, String email_id, int contact, int rating) {
+	public Actor(String name, String gender, int age, String email_id, String contact, int rating) {
 		super();
 		this.name = name;
 		this.gender = gender;
@@ -40,10 +40,10 @@ public class Actor implements Comparable<Actor>
 	public void setEmail_id(String email_id) {
 		this.email_id = email_id;
 	}
-	public int getContact() {
+	public String getContact() {
 		return contact;
 	}
-	public void setContact(int contact) {
+	public void setContact(String contact) {
 		this.contact = contact;
 	}
 	public double getRating() {
