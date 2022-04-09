@@ -15,7 +15,7 @@ public class ActorTest {
 	
 	static Scanner sc = new Scanner(System.in);
 	ArrayList<Actor>al= new ArrayList<Actor>();
-	static Actor a =null;
+	//static Actor a =null;
 	public static void AcceptRecord(ArrayList<Actor>a) 
 	{
 		System.out.println("Enter the Actor's name");
@@ -50,8 +50,50 @@ public class ActorTest {
 			
 		}
 	}
+	//Actor a= new Actor(aname, agender, aage, aemailid, acontact, arating);
 	public static void main(String[] args) {
+		//a.add(new Actor("Amir khan","male",28,"amir@gmail.com",9421135877,4));
+		int choice= 0;
+		int count =0;
 		
+		do {
+			System.out.println("**************Options**************");
+			System.out.println("1. Add Actor");
+			System.out.println("2. Remove Actor");
+			System.out.println("3. Modify Actor's rating");
+			System.out.println("4. Search Actor's by name");
+			System.out.println("5. Sort Actor's by name");
+			System.out.println("6. Display All Actor");
+			choice =sc.nextInt();
+			switch(choice)
+			{
+			case 1:
+			{
+				
+			}break;
+			
+			case 2:
+			{
+				
+			}break;
+			case 3:
+			{
+				
+			}break;
+			case 4:
+			{
+				
+			}break;
+			case 5:
+			{
+				
+			}break;
+			case 6:
+			{
+				
+			}break;
+			}
+		}while(choice!=7);
 		
 
 	}
