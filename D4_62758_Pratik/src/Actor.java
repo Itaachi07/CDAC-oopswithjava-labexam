@@ -6,8 +6,8 @@ public class Actor implements Comparable<Actor>
 	int age;
 	String email_id;
 	int contact;
-	double rating;
-	public Actor(String name, String gender, int age, String email_id, int contact, double rating) {
+	int rating;
+	public Actor(String name, String gender, int age, String email_id, int contact, int rating) {
 		super();
 		this.name = name;
 		this.gender = gender;
@@ -49,7 +49,7 @@ public class Actor implements Comparable<Actor>
 	public double getRating() {
 		return rating;
 	}
-	public void setRating(double rating) {
+	public void setRating(int rating) {
 		this.rating = rating;
 	}
 	@Override
@@ -60,7 +60,8 @@ public class Actor implements Comparable<Actor>
 	@Override
 	public int compareTo(Actor o) {
 		// TODO Auto-generated method stub
-		return this.rating-o.(this.rating);
+		return this.getName().compareTo(getName());
+	}
+		
 	}
 	
-}
