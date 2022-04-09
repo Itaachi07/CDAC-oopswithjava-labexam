@@ -1,3 +1,4 @@
+import java.util.Comparator;
 
 public class Actor implements Comparable<Actor>
 {
@@ -13,9 +14,11 @@ public class Actor implements Comparable<Actor>
 		this.gender = gender;
 		this.age = age;
 		this.email_id = email_id;
-		this.contact = contact;
+		String i = null;
+		this.contact = i;
 		this.rating = rating;
 	}
+	
 	public String getName() {
 		return name;
 	}
@@ -62,6 +65,41 @@ public class Actor implements Comparable<Actor>
 		// TODO Auto-generated method stub
 		return this.getName().compareTo(getName());
 	}
-		
 	}
 	
+class Age implements Comparator<Actor>{
+
+	@Override
+	public int compare(Actor o1, Actor o2) {
+		// TODO Auto-generated method stub
+		if (o1.getAge()==o2.getAge())
+			return 0;
+		if(o1.getAge()>o2.getAge())
+			{return 1;
+			}
+		return -1;
+	}
+	
+}
+
+class Rating implements Comparator<Actor>{
+
+	@Override
+	public int compare(Actor o1, Actor o2) {
+		// TODO Auto-generated method stub
+		if (o1.getRating()==o2.getRating())
+			return 0;
+		if(o1.getRating()>o2.getRating())
+			{return 1;
+			}
+		return -1;
+	}
+	
+}
+
+
+
+
+
+
+
