@@ -52,7 +52,7 @@ public class ActorTest {
 			System.out.println("ActorOvererratedException. Actor rating is now considered as 5");
 			
 		}
-		a=new Actor(acontact, acontact, aage, acontact, acontact, aage);
+		a=new Actor(aname, agender, aage, acontact, acontact, aage);
 	}
 	
 	public static void main(String[] args) {
@@ -70,6 +70,7 @@ public class ActorTest {
 			System.out.println("4. Search Actor's by name");
 			System.out.println("5. Sort Actor's by Name/age/");
 			System.out.println("6. Display All Actor");
+			System.out.println("7.Exit");
 			System.out.println("***********************************");
 			choice =sc.nextInt();
 			switch(choice)
@@ -150,18 +151,22 @@ public class ActorTest {
 				choice =sc.nextInt();
 				switch(choice1)
 				{
-				case 1:{
+				case 1:
+				{
 				Collections.sort(al);
 				for(Object obj:al)
 					System.out.println(obj);
 				}break;
 				case 2:{
-					Collections.sort(al);
-					
+					Collections.sort(al,new Age());
+					for(Object obj:al)
+						System.out.println(obj);
 				}break;
 				case 3:
 				{
-					
+					Collections.sort(al,new Rating());
+					for(Object obj:al)
+						System.out.println(obj);
 				}break;
 				}
 			}break;
@@ -173,6 +178,9 @@ public class ActorTest {
 			}break;
 			}
 		}while(choice!=7);
+		{
+			System.out.println("Bye ");
+		}
 		
 
 	}
