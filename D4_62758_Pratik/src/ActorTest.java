@@ -91,7 +91,7 @@ public class ActorTest {
 				String an=sc.next()+""+sc.nextLine();
 				for(int i=0;i<al.size();i++)
 				{
-				if(al.get(i).getName()==an)	
+				if(al.get(i).getName().equals(an))	
 				{
 					al.remove(i);
 					count++;
@@ -109,11 +109,11 @@ public class ActorTest {
 				System.out.println("Enter the name of actor of which rating you want to modify");
 				for(Object obj:al)
 					System.out.println(obj);
-				String an1=sc.next()+""+sc.nextLine();
+				String an1=sc.next();
 				System.out.println("Enter rating to the modified");
 				for(int i=0;i<al.size();i++)
 				{
-				if(al.get(i).getName()==an1)	
+				if(al.get(i).getName().equals(an1))	
 				{
 					a.setRating(i);
 					count1++;
@@ -143,6 +143,7 @@ public class ActorTest {
 					System.out.println("Actor not found");
 				}
 			}break;
+			
 			case 5:
 			{	System.out.println("1. Sort Actor's by Name");
 			System.out.println("2. Sort Actor's by age");
