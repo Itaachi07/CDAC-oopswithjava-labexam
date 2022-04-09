@@ -56,7 +56,7 @@ public class ActorTest {
 	}
 	
 	public static void main(String[] args) {
-		//al.add(new Actor("Amir","male",28,"amir@gmail.com",9421135877,4));
+		
 		int choice= 0;
 		int count =0;
 		int count1 =0;
