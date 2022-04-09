@@ -57,6 +57,8 @@ public class ActorTest {
 		//al.add(new Actor("Amir","male",28,"amir@gmail.com",9421135877,4));
 		int choice= 0;
 		int count =0;
+		int count1 =0;
+		int count2 =0;
 		
 		do {
 			System.out.println("**************Options**************");
@@ -79,16 +81,63 @@ public class ActorTest {
 			
 			case 2:
 			{
-				System.out.println();
-				
+				System.out.println("Enter  the name of actor you want to remove");
+				for(Object obj:al)
+					System.out.println(obj);
+				String an=sc.next()+""+sc.nextLine();
+				for(int i=0;i<al.size();i++)
+				{
+				if(al.get(i).getName()==an)	
+				{
+					al.remove(i);
+					count++;
+					System.out.println("Actor removed");
+				}
+				}if(count==0)
+				{
+					System.out.println("Actor not Found");
+				}
+				for(Object obj:al)
+					System.out.println(obj);
 			}break;
 			case 3:
 			{
+				System.out.println("Enter the name of actor of which rating you want to modify");
+				for(Object obj:al)
+					System.out.println(obj);
+				String an1=sc.next()+""+sc.nextLine();
+				System.out.println("Enter rating to the modified");
+				for(int i=0;i<al.size();i++)
+				{
+				if(al.get(i).getName()==an1)	
+				{
+					a.setRating(i);
+					count1++;
+					System.out.println("Rating Modified");
+				}
+				}if(count1==0)
+				{
+					System.out.println("Actor not Found");
+				}
+				for(Object obj:al)
+					System.out.println(obj);
 				
 			}break;
 			case 4:
 			{
-				
+				System.out.println("Enter actor name");
+				String an2=sc.next()+""+sc.nextLine();
+				for(Actor a1:al)
+				{
+					if(a1.getName().equals(al))
+				{
+						System.out.println(a1);
+						count2++;
+				}
+				}if (count2==0)
+				{
+					System.out.println("Actor not found");
+				}
 			}break;
 			case 5:
 			{
